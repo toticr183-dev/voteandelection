@@ -1363,129 +1363,7 @@
 }
 
 .btn-vote {
-    flex: 2;
-    background: linear-gradient(135deg, #c49a6c, #a57c52);
-    color: white;
-    border: none;
-    padding: 14px 24px;
-    border-radius: 40px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-}
 
-.btn-vote:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(196, 154, 108, 0.3);
-}
-
-.btn-reset {
-    flex: 1;
-    background: #f1f3f5;
-    color: #6c757d;
-    border: none;
-    padding: 14px 24px;
-    border-radius: 40px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.btn-reset:hover {
-    background: #e9ecef;
-    color: #495057;
-}
-
-.form-note {
-    text-align: center;
-    font-size: 0.8rem;
-    color: #6c757d;
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #e9ecef;
-}
-
-.form-note i {
-    color: #c49a6c;
-    margin-right: 5px;
-}
-
-/* Success & Error Messages */
-.success-message,
-.error-message {
-    text-align: center;
-    padding: 40px;
-    background: white;
-    border-radius: 24px;
-    max-width: 500px;
-    margin: 30px auto;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.success-message i {
-    font-size: 4rem;
-    color: #28a745;
-    margin-bottom: 15px;
-}
-
-.error-message i {
-    font-size: 4rem;
-    color: #dc3545;
-    margin-bottom: 15px;
-}
-
-.success-message h3,
-.error-message h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.success-message p,
-.error-message p {
-    color: #6c757d;
-    margin-bottom: 20px;
-}
-
-.btn-close {
-    background: #c49a6c;
-    color: white;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s;
-}
-
-.btn-close:hover {
-    background: #a57c52;
-    transform: translateY(-2px);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .voting-card {
-        padding: 25px;
-    }
-    
-    .candidate-options {
-        flex-direction: column;
-    }
-    
-    .form-actions {
-        flex-direction: column;
-    }
-    
-    .btn-vote, .btn-reset {
-        width: 100%;
-    }
-    
-    .form-header h2 {
-        font-size: 1.5rem;
-    }
-}
     </style>
 </head>
 <body>
@@ -1710,36 +1588,50 @@
             </div>
         </section>
         <!-- ===== VOTING FORM SECTION ===== -->
-<section class="voting-form-section">
-    <div class="container">
-        <div class="form-header">
-            <h2><i class="fas fa-vote-yea"></i> Cast Your Vote</h2>
-            <p>Please fill out the form below to vote. Your vote is confidential and secure.</p>
-            <div class="form-decoration"></div>
+<!-- ===== VOTING FORM SECTION - FIXED ===== -->
+<section class="voting-form-section" style="padding: 60px 0; background: #f8f9fa;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="form-header" style="text-align: center; margin-bottom: 40px;">
+            <h2 style="font-size: 2rem; color: #2c3e50; margin-bottom: 10px;">
+                <i class="fas fa-vote-yea" style="color: #c49a6c;"></i> Cast Your Vote
+            </h2>
+            <p style="color: #6c757d;">Please fill out the form below to vote. Your vote is confidential and secure.</p>
+            <div style="width: 80px; height: 3px; background: #c49a6c; margin: 15px auto 0; border-radius: 3px;"></div>
         </div>
 
-        <div class="voting-card">
+        <div style="max-width: 700px; margin: 0 auto; background: white; border-radius: 20px; padding: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
             <form id="votingForm" onsubmit="submitVote(event)">
                 <!-- Voter Information -->
-                <div class="form-group">
-                    <label><i class="fas fa-id-card"></i> Student ID *</label>
-                    <input type="text" id="studentId" placeholder="Enter your Student ID (e.g., STU-2024-001)" required>
-                    <small>Your Student ID will be verified before voting</small>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #2c3e50;">
+                        <i class="fas fa-id-card" style="color: #c49a6c;"></i> Student ID *
+                    </label>
+                    <input type="text" id="studentId" placeholder="Enter your Student ID (e.g., STU-2024-001)" required
+                           style="width: 100%; padding: 12px; border: 2px solid #e9ecef; border-radius: 10px; font-size: 1rem;">
+                    <small style="display: block; margin-top: 5px; color: #6c757d;">Your Student ID will be verified before voting</small>
                 </div>
 
-                <div class="form-group">
-                    <label><i class="fas fa-user"></i> Full Name *</label>
-                    <input type="text" id="fullName" placeholder="Enter your full name" required>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #2c3e50;">
+                        <i class="fas fa-user" style="color: #c49a6c;"></i> Full Name *
+                    </label>
+                    <input type="text" id="fullName" placeholder="Enter your full name" required
+                           style="width: 100%; padding: 12px; border: 2px solid #e9ecef; border-radius: 10px; font-size: 1rem;">
                 </div>
 
-                <div class="form-group">
-                    <label><i class="fas fa-envelope"></i> Email Address *</label>
-                    <input type="email" id="email" placeholder="your@email.com" required>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #2c3e50;">
+                        <i class="fas fa-envelope" style="color: #c49a6c;"></i> Email Address *
+                    </label>
+                    <input type="email" id="email" placeholder="your@email.com" required
+                           style="width: 100%; padding: 12px; border: 2px solid #e9ecef; border-radius: 10px; font-size: 1rem;">
                 </div>
 
-                <div class="form-group">
-                    <label><i class="fas fa-graduation-cap"></i> Grade/Section *</label>
-                    <select id="grade" required>
+                <div style="margin-bottom: 25px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #2c3e50;">
+                        <i class="fas fa-graduation-cap" style="color: #c49a6c;"></i> Grade/Section *
+                    </label>
+                    <select id="grade" required style="width: 100%; padding: 12px; border: 2px solid #e9ecef; border-radius: 10px; font-size: 1rem;">
                         <option value="">-- Select Grade --</option>
                         <option value="Grade 9A">Grade 9A</option>
                         <option value="Grade 9B">Grade 9B</option>
@@ -1754,82 +1646,101 @@
                 </div>
 
                 <!-- Presidential Candidates -->
-                <div class="candidate-section">
-                    <h3><i class="fas fa-crown"></i> President</h3>
-                    <div class="candidate-options">
-                        <label class="candidate-option">
-                            <input type="radio" name="president" value="Keneni Wako" required>
-                            <span class="candidate-name">Keneni Wako</span>
-                            <span class="candidate-grade">Grade 11B</span>
+                <div style="margin: 25px 0; padding: 20px; background: #f8f9fa; border-radius: 15px;">
+                    <h3 style="font-size: 1.2rem; color: #2c3e50; margin-bottom: 15px;">
+                        <i class="fas fa-crown" style="color: #c49a6c;"></i> President
+                    </h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                        <label style="flex: 1; display: flex; align-items: center; gap: 10px; padding: 12px; background: white; border-radius: 10px; cursor: pointer;">
+                            <input type="radio" name="president" value="Keneni Wako" required> 
+                            <span><strong>Keneni Wako</strong></span>
+                            <span style="margin-left: auto; color: #c49a6c;">Grade 11B</span>
                         </label>
-                        <label class="candidate-option">
-                            <input type="radio" name="president" value="Solomon Alemayew">
-                            <span class="candidate-name">Solomon Alemayew</span>
-                            <span class="candidate-grade">Grade 11B</span>
+                        <label style="flex: 1; display: flex; align-items: center; gap: 10px; padding: 12px; background: white; border-radius: 10px; cursor: pointer;">
+                            <input type="radio" name="president" value="Solomon Alemayew"> 
+                            <span><strong>Solomon Alemayew</strong></span>
+                            <span style="margin-left: auto; color: #c49a6c;">Grade 11B</span>
                         </label>
                     </div>
                 </div>
 
                 <!-- Vice President Candidates -->
-                <div class="candidate-section">
-                    <h3><i class="fas fa-user-tie"></i> Vice President</h3>
-                    <div class="candidate-options">
-                        <label class="candidate-option">
-                            <input type="radio" name="vp" value="Ekram Mohammed" required>
-                            <span class="candidate-name">Ekram Mohammed</span>
-                            <span class="candidate-grade">Grade 11B</span>
+                <div style="margin: 25px 0; padding: 20px; background: #f8f9fa; border-radius: 15px;">
+                    <h3 style="font-size: 1.2rem; color: #2c3e50; margin-bottom: 15px;">
+                        <i class="fas fa-user-tie" style="color: #c49a6c;"></i> Vice President
+                    </h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                        <label style="flex: 1; display: flex; align-items: center; gap: 10px; padding: 12px; background: white; border-radius: 10px; cursor: pointer;">
+                            <input type="radio" name="vp" value="Ekram Mohammed" required> 
+                            <span><strong>Ekram Mohammed</strong></span>
+                            <span style="margin-left: auto; color: #c49a6c;">Grade 11B</span>
                         </label>
-                        <label class="candidate-option">
-                            <input type="radio" name="vp" value="Natnael Habtamu">
-                            <span class="candidate-name">Natnael Habtamu</span>
-                            <span class="candidate-grade">Grade 11B</span>
+                        <label style="flex: 1; display: flex; align-items: center; gap: 10px; padding: 12px; background: white; border-radius: 10px; cursor: pointer;">
+                            <input type="radio" name="vp" value="Natnael Habtamu"> 
+                            <span><strong>Natnael Habtamu</strong></span>
+                            <span style="margin-left: auto; color: #c49a6c;">Grade 11B</span>
                         </label>
                     </div>
                 </div>
 
                 <!-- Secretary Candidates -->
-                <div class="candidate-section">
-                    <h3><i class="fas fa-file-alt"></i> Secretary</h3>
-                    <div class="candidate-options">
-                        <label class="candidate-option">
-                            <input type="radio" name="secretary" value="Meryem Desalegn" required>
-                            <span class="candidate-name">Meryem Desalegn</span>
-                            <span class="candidate-grade">Grade 11B</span>
+                <div style="margin: 25px 0; padding: 20px; background: #f8f9fa; border-radius: 15px;">
+                    <h3 style="font-size: 1.2rem; color: #2c3e50; margin-bottom: 15px;">
+                        <i class="fas fa-file-alt" style="color: #c49a6c;"></i> Secretary
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 10px; cursor: pointer;">
+                            <input type="radio" name="secretary" value="Meryem Desalegn" required> 
+                            <span><strong>Meryem Desalegn</strong></span>
                         </label>
-                        <label class="candidate-option">
-                            <input type="radio" name="secretary" value="Melat Daniel">
-                            <span class="candidate-name">Melat Daniel</span>
-                            <span class="candidate-grade">Grade 11B</span>
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 10px; cursor: pointer;">
+                            <input type="radio" name="secretary" value="Melat Daniel"> 
+                            <span><strong>Melat Daniel</strong></span>
                         </label>
-                        <label class="candidate-option">
-                            <input type="radio" name="secretary" value="Mohammed Hamza">
-                            <span class="candidate-name">Mohammed Hamza</span>
-                            <span class="candidate-grade">Grade 11B</span>
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 10px; cursor: pointer;">
+                            <input type="radio" name="secretary" value="Mohammed Hamza"> 
+                            <span><strong>Mohammed Hamza</strong></span>
                         </label>
-                        <label class="candidate-option">
-                            <input type="radio" name="secretary" value="Biruk Daniel">
-                            <span class="candidate-name">Biruk Daniel</span>
-                            <span class="candidate-grade">Grade 11B</span>
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 10px; cursor: pointer;">
+                            <input type="radio" name="secretary" value="Biruk Daniel"> 
+                            <span><strong>Biruk Daniel</strong></span>
                         </label>
                     </div>
                 </div>
 
-                <!-- Submit Button -->
-                <div class="form-actions">
-                    <button type="submit" class="btn-vote">
+                <!-- Submit Buttons -->
+                <div style="display: flex; gap: 15px; margin: 30px 0 20px;">
+                    <button type="submit" style="flex: 2; background: linear-gradient(135deg, #c49a6c, #a57c52); color: white; border: none; padding: 14px; border-radius: 40px; font-size: 1rem; font-weight: 600; cursor: pointer;">
                         <i class="fas fa-check-circle"></i> Submit Your Vote
                     </button>
-                    <button type="reset" class="btn-reset">
-                        <i class="fas fa-undo-alt"></i> Clear Form
+                    <button type="reset" style="flex: 1; background: #f1f3f5; color: #6c757d; border: none; padding: 14px; border-radius: 40px; font-size: 1rem; font-weight: 600; cursor: pointer;">
+                        <i class="fas fa-undo-alt"></i> Clear
                     </button>
                 </div>
 
-                <p class="form-note">
-                    <i class="fas fa-lock"></i> Your vote is confidential and will be recorded anonymously.
-                    Each student can vote only once.
+                <p style="text-align: center; font-size: 0.8rem; color: #6c757d; margin-top: 15px; padding-top: 15px; border-top: 1px solid #e9ecef;">
+                    <i class="fas fa-lock" style="color: #c49a6c;"></i> Your vote is confidential. Each student can vote only once.
                 </p>
             </form>
         </div>
+
+        <!-- Success Message -->
+        <div id="voteSuccess" style="display: none; text-align: center; max-width: 500px; margin: 30px auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <i class="fas fa-check-circle" style="font-size: 4rem; color: #28a745;"></i>
+            <h3 style="margin: 15px 0 10px;">Thank You for Voting!</h3>
+            <p>Your vote has been recorded successfully.</p>
+            <button onclick="closeSuccess()" style="background: #c49a6c; color: white; border: none; padding: 10px 30px; border-radius: 30px; margin-top: 15px; cursor: pointer;">Close</button>
+        </div>
+
+        <!-- Already Voted Message -->
+        <div id="alreadyVoted" style="display: none; text-align: center; max-width: 500px; margin: 30px auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <i class="fas fa-exclamation-triangle" style="font-size: 4rem; color: #dc3545;"></i>
+            <h3 style="margin: 15px 0 10px;">Already Voted!</h3>
+            <p>This Student ID has already cast a vote. Each student can only vote once.</p>
+            <button onclick="closeError()" style="background: #c49a6c; color: white; border: none; padding: 10px 30px; border-radius: 30px; margin-top: 15px; cursor: pointer;">Close</button>
+        </div>
+    </div>
+</section>
 
         <!-- Success Message (hidden by default) -->
         <div id="voteSuccess" class="success-message" style="display: none;">
@@ -2540,5 +2451,85 @@
     });
 </script>
     </script>
+    <script>
+    // Store voted students
+    let votedStudents = JSON.parse(localStorage.getItem('votedStudents')) || [];
+    
+    // Vote counts
+    let voteCounts = JSON.parse(localStorage.getItem('voteCounts')) || {
+        president: { "Keneni Wako": 45, "Solomon Alemayew": 27 },
+        vp: { "Ekram Mohammed": 38, "Natnael Habtamu": 41 },
+        secretary: { "Meryem Desalegn": 52, "Melat Daniel": 33, "Mohammed Hamza": 29, "Biruk Daniel": 52 }
+    };
+    
+    function submitVote(event) {
+        event.preventDefault();
+        
+        const studentId = document.getElementById('studentId').value.trim();
+        const fullName = document.getElementById('fullName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const grade = document.getElementById('grade').value;
+        
+        if(votedStudents.includes(studentId)) {
+            document.querySelector('.voting-form-section .form-header').style.display = 'none';
+            document.querySelector('.voting-form-section .voting-card').style.display = 'none';
+            document.getElementById('alreadyVoted').style.display = 'block';
+            return;
+        }
+        
+        const president = document.querySelector('input[name="president"]:checked');
+        const vp = document.querySelector('input[name="vp"]:checked');
+        const secretary = document.querySelector('input[name="secretary"]:checked');
+        
+        if(!president || !vp || !secretary) {
+            alert('Please select candidates for all positions!');
+            return;
+        }
+        
+        voteCounts.president[president.value]++;
+        voteCounts.vp[vp.value]++;
+        voteCounts.secretary[secretary.value]++;
+        
+        localStorage.setItem('voteCounts', JSON.stringify(voteCounts));
+        votedStudents.push(studentId);
+        localStorage.setItem('votedStudents', JSON.stringify(votedStudents));
+        
+        let voters = JSON.parse(localStorage.getItem('voters')) || [];
+        voters.push({ id: studentId, name: fullName, email: email, grade: grade, date: new Date().toLocaleString() });
+        localStorage.setItem('voters', JSON.stringify(voters));
+        
+        document.querySelector('.voting-form-section .form-header').style.display = 'none';
+        document.querySelector('.voting-form-section .voting-card').style.display = 'none';
+        document.getElementById('voteSuccess').style.display = 'block';
+        
+        updateResultsDisplay();
+    }
+    
+    function updateResultsDisplay() {
+        const totalVotesSpan = document.getElementById('totalVotesCast');
+        if(totalVotesSpan) totalVotesSpan.innerText = votedStudents.length;
+        
+        const turnoutSpan = document.getElementById('turnout');
+        if(turnoutSpan) {
+            const totalStudents = 296;
+            turnoutSpan.innerText = Math.round((votedStudents.length / totalStudents) * 100);
+        }
+    }
+    
+    function closeSuccess() {
+        document.getElementById('voteSuccess').style.display = 'none';
+        document.getElementById('votingForm').reset();
+        location.reload();
+    }
+    
+    function closeError() {
+        document.getElementById('alreadyVoted').style.display = 'none';
+        location.reload();
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        updateResultsDisplay();
+    });
+</script>
 </body>
 </html>
