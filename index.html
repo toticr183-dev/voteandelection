@@ -2382,74 +2382,7 @@
         if(secMeryem) secMeryem.innerText = voteCounts.secretary["Meryem Desalegn"];
         if(secMelat) secMelat.innerText = voteCounts.secretary["Melat Daniel"];
         if(secMohammed) secMohammed.innerText = voteCounts.secretary["Mohammed Hamza"];
-        if(secBiruk) secBiruk.innerText = voteCounts.secretary["Biruk Daniel"];
-        
-        // Update total votes
-        const totalVotesSpan = document.getElementById('totalVotesCast');
-        if(totalVotesSpan) totalVotesSpan.innerText = votedStudents.length;
-        
-        // Update turnout
-        const turnoutSpan = document.getElementById('turnout');
-        if(turnoutSpan) {
-            const totalStudents = 296; // Adjust based on your school
-            const turnoutPercent = Math.round((votedStudents.length / totalStudents) * 100);
-            turnoutSpan.innerText = turnoutPercent;
-        }
-        
-        // Update progress bars if they exist
-        updateProgressBars();
-    }
-    
-    function updateProgressBars() {
-        // Update President progress bars
-        const presTotal = voteCounts.president["Keneni Wako"] + voteCounts.president["Solomon Alemayew"];
-        if(presTotal > 0) {
-            const keneniPercent = (voteCounts.president["Keneni Wako"] / presTotal) * 100;
-            const solomonPercent = (voteCounts.president["Solomon Alemayew"] / presTotal) * 100;
-            
-            const keneniBar = document.querySelector('#presidentKeneni .progress-bar');
-            const solomonBar = document.querySelector('#presidentSolomon .progress-bar');
-            if(keneniBar) keneniBar.style.width = keneniPercent + '%';
-            if(solomonBar) solomonBar.style.width = solomonPercent + '%';
-        }
-        
-        // Update VP progress bars
-        const vpTotal = voteCounts.vp["Ekram Mohammed"] + voteCounts.vp["Natnael Habtamu"];
-        if(vpTotal > 0) {
-            const ekramPercent = (voteCounts.vp["Ekram Mohammed"] / vpTotal) * 100;
-            const natnaelPercent = (voteCounts.vp["Natnael Habtamu"] / vpTotal) * 100;
-            
-            const ekramBar = document.querySelector('#vpEkram .progress-bar');
-            const natnaelBar = document.querySelector('#vpNatnael .progress-bar');
-            if(ekramBar) ekramBar.style.width = ekramPercent + '%';
-            if(natnaelBar) natnaelBar.style.width = natnaelPercent + '%';
-        }
-        
-        // Update Secretary progress bars
-        const secTotal = voteCounts.secretary["Meryem Desalegn"] + voteCounts.secretary["Melat Daniel"] + 
-                        voteCounts.secretary["Mohammed Hamza"] + voteCounts.secretary["Biruk Daniel"];
-        if(secTotal > 0) {
-            const meryemPercent = (voteCounts.secretary["Meryem Desalegn"] / secTotal) * 100;
-            const melatPercent = (voteCounts.secretary["Melat Daniel"] / secTotal) * 100;
-            const mohammedPercent = (voteCounts.secretary["Mohammed Hamza"] / secTotal) * 100;
-            const birukPercent = (voteCounts.secretary["Biruk Daniel"] / secTotal) * 100;
-            
-            const meryemBar = document.querySelector('#secMeryem .progress-bar');
-            const melatBar = document.querySelector('#secMelat .progress-bar');
-            const mohammedBar = document.querySelector('#secMohammed .progress-bar');
-            const birukBar = document.querySelector('#secBiruk .progress-bar');
-            if(meryemBar) meryemBar.style.width = meryemPercent + '%';
-            if(melatBar) melatBar.style.width = melatPercent + '%';
-            if(mohammedBar) mohammedBar.style.width = mohammedPercent + '%';
-            if(birukBar) birukBar.style.width = birukPercent + '%';
-        }
-    }
-    
-    // Initialize from stored data on page load
-    document.addEventListener('DOMContentLoaded', function() {
-        updateResultsTable();
-    });
-</script>
+  
     </script>
     <script>
     // Store voted students
