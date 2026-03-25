@@ -1201,6 +1201,291 @@
                 transform: translateY(0);
             }
         }
+        /* ===== VOTING FORM SECTION ===== */
+.voting-form-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-header h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.form-header h2 i {
+    color: #c49a6c;
+    margin-right: 10px;
+}
+
+.form-header p {
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+.form-decoration {
+    width: 80px;
+    height: 3px;
+    background: #c49a6c;
+    margin: 20px auto 0;
+    border-radius: 3px;
+}
+
+/* Voting Card */
+.voting-card {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-group label i {
+    color: #c49a6c;
+    margin-right: 8px;
+    width: 20px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #c49a6c;
+    box-shadow: 0 0 0 3px rgba(196, 154, 108, 0.1);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.75rem;
+    color: #6c757d;
+}
+
+/* Candidate Sections */
+.candidate-section {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 16px;
+}
+
+.candidate-section h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #c49a6c;
+    display: inline-block;
+}
+
+.candidate-section h3 i {
+    color: #c49a6c;
+    margin-right: 8px;
+}
+
+.candidate-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.candidate-option {
+    flex: 1;
+    min-width: 180px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.candidate-option:hover {
+    background: #fff9f0;
+    border-color: #c49a6c;
+}
+
+.candidate-option input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #c49a6c;
+}
+
+.candidate-name {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.candidate-grade {
+    font-size: 0.75rem;
+    color: #c49a6c;
+    margin-left: auto;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0 20px;
+}
+
+.btn-vote {
+    flex: 2;
+    background: linear-gradient(135deg, #c49a6c, #a57c52);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-vote:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(196, 154, 108, 0.3);
+}
+
+.btn-reset {
+    flex: 1;
+    background: #f1f3f5;
+    color: #6c757d;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-reset:hover {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.form-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e9ecef;
+}
+
+.form-note i {
+    color: #c49a6c;
+    margin-right: 5px;
+}
+
+/* Success & Error Messages */
+.success-message,
+.error-message {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 24px;
+    max-width: 500px;
+    margin: 30px auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.success-message i {
+    font-size: 4rem;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.error-message i {
+    font-size: 4rem;
+    color: #dc3545;
+    margin-bottom: 15px;
+}
+
+.success-message h3,
+.error-message h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.success-message p,
+.error-message p {
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.btn-close {
+    background: #c49a6c;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-close:hover {
+    background: #a57c52;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .voting-card {
+        padding: 25px;
+    }
+    
+    .candidate-options {
+        flex-direction: column;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .btn-vote, .btn-reset {
+        width: 100%;
+    }
+    
+    .form-header h2 {
+        font-size: 1.5rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -1424,6 +1709,145 @@
                 </div>
             </div>
         </section>
+        <!-- ===== VOTING FORM SECTION ===== -->
+<section class="voting-form-section">
+    <div class="container">
+        <div class="form-header">
+            <h2><i class="fas fa-vote-yea"></i> Cast Your Vote</h2>
+            <p>Please fill out the form below to vote. Your vote is confidential and secure.</p>
+            <div class="form-decoration"></div>
+        </div>
+
+        <div class="voting-card">
+            <form id="votingForm" onsubmit="submitVote(event)">
+                <!-- Voter Information -->
+                <div class="form-group">
+                    <label><i class="fas fa-id-card"></i> Student ID *</label>
+                    <input type="text" id="studentId" placeholder="Enter your Student ID (e.g., STU-2024-001)" required>
+                    <small>Your Student ID will be verified before voting</small>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Full Name *</label>
+                    <input type="text" id="fullName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-envelope"></i> Email Address *</label>
+                    <input type="email" id="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-graduation-cap"></i> Grade/Section *</label>
+                    <select id="grade" required>
+                        <option value="">-- Select Grade --</option>
+                        <option value="Grade 9A">Grade 9A</option>
+                        <option value="Grade 9B">Grade 9B</option>
+                        <option value="Grade 10A">Grade 10A</option>
+                        <option value="Grade 10B">Grade 10B</option>
+                        <option value="Grade 11A">Grade 11A</option>
+                        <option value="Grade 11B">Grade 11B</option>
+                        <option value="Grade 11NC">Grade 11NC</option>
+                        <option value="Grade 12A">Grade 12A</option>
+                        <option value="Grade 12B">Grade 12B</option>
+                    </select>
+                </div>
+
+                <!-- Presidential Candidates -->
+                <div class="candidate-section">
+                    <h3><i class="fas fa-crown"></i> President</h3>
+                    <div class="candidate-options">
+                        <label class="candidate-option">
+                            <input type="radio" name="president" value="Keneni Wako" required>
+                            <span class="candidate-name">Keneni Wako</span>
+                            <span class="candidate-grade">Grade 11B</span>
+                        </label>
+                        <label class="candidate-option">
+                            <input type="radio" name="president" value="Solomon Alemayew">
+                            <span class="candidate-name">Solomon Alemayew</span>
+                            <span class="candidate-grade">Grade 11B</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Vice President Candidates -->
+                <div class="candidate-section">
+                    <h3><i class="fas fa-user-tie"></i> Vice President</h3>
+                    <div class="candidate-options">
+                        <label class="candidate-option">
+                            <input type="radio" name="vp" value="Ekram Mohammed" required>
+                            <span class="candidate-name">Ekram Mohammed</span>
+                            <span class="candidate-grade">Grade 11B</span>
+                        </label>
+                        <label class="candidate-option">
+                            <input type="radio" name="vp" value="Natnael Habtamu">
+                            <span class="candidate-name">Natnael Habtamu</span>
+                            <span class="candidate-grade">Grade 11B</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Secretary Candidates -->
+                <div class="candidate-section">
+                    <h3><i class="fas fa-file-alt"></i> Secretary</h3>
+                    <div class="candidate-options">
+                        <label class="candidate-option">
+                            <input type="radio" name="secretary" value="Meryem Desalegn" required>
+                            <span class="candidate-name">Meryem Desalegn</span>
+                            <span class="candidate-grade">Grade 11B</span>
+                        </label>
+                        <label class="candidate-option">
+                            <input type="radio" name="secretary" value="Melat Daniel">
+                            <span class="candidate-name">Melat Daniel</span>
+                            <span class="candidate-grade">Grade 11B</span>
+                        </label>
+                        <label class="candidate-option">
+                            <input type="radio" name="secretary" value="Mohammed Hamza">
+                            <span class="candidate-name">Mohammed Hamza</span>
+                            <span class="candidate-grade">Grade 11B</span>
+                        </label>
+                        <label class="candidate-option">
+                            <input type="radio" name="secretary" value="Biruk Daniel">
+                            <span class="candidate-name">Biruk Daniel</span>
+                            <span class="candidate-grade">Grade 11B</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-vote">
+                        <i class="fas fa-check-circle"></i> Submit Your Vote
+                    </button>
+                    <button type="reset" class="btn-reset">
+                        <i class="fas fa-undo-alt"></i> Clear Form
+                    </button>
+                </div>
+
+                <p class="form-note">
+                    <i class="fas fa-lock"></i> Your vote is confidential and will be recorded anonymously.
+                    Each student can vote only once.
+                </p>
+            </form>
+        </div>
+
+        <!-- Success Message (hidden by default) -->
+        <div id="voteSuccess" class="success-message" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <h3>Thank You for Voting!</h3>
+            <p>Your vote has been recorded successfully. You have contributed to shaping our student council.</p>
+            <button onclick="closeSuccess()" class="btn-close">Close</button>
+        </div>
+
+        <!-- Already Voted Message -->
+        <div id="alreadyVoted" class="error-message" style="display: none;">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h3>Already Voted!</h3>
+            <p>This Student ID has already cast a vote. Each student can only vote once.</p>
+            <button onclick="closeError()" class="btn-close">Close</button>
+        </div>
+    </div>
+</section>
 
         <!-- Stats Section -->
         <section class="stats-section">
@@ -1942,6 +2366,179 @@
                 closeModal();
             }
         });
+        <script>
+    // Store voted students in localStorage
+    let votedStudents = JSON.parse(localStorage.getItem('votedStudents')) || [];
+    
+    // Get vote counts from localStorage or initialize
+    let voteCounts = JSON.parse(localStorage.getItem('voteCounts')) || {
+        president: { "Keneni Wako": 0, "Solomon Alemayew": 0 },
+        vp: { "Ekram Mohammed": 0, "Natnael Habtamu": 0 },
+        secretary: { "Meryem Desalegn": 0, "Melat Daniel": 0, "Mohammed Hamza": 0, "Biruk Daniel": 0 }
+    };
+    
+    function submitVote(event) {
+        event.preventDefault();
+        
+        // Get student ID
+        const studentId = document.getElementById('studentId').value.trim();
+        const fullName = document.getElementById('fullName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const grade = document.getElementById('grade').value;
+        
+        // Check if already voted
+        if(votedStudents.includes(studentId)) {
+            document.getElementById('votingForm').style.display = 'none';
+            document.getElementById('alreadyVoted').style.display = 'block';
+            return;
+        }
+        
+        // Get selected candidates
+        const president = document.querySelector('input[name="president"]:checked');
+        const vp = document.querySelector('input[name="vp"]:checked');
+        const secretary = document.querySelector('input[name="secretary"]:checked');
+        
+        if(!president || !vp || !secretary) {
+            alert('Please select candidates for all positions!');
+            return;
+        }
+        
+        // Update vote counts
+        voteCounts.president[president.value]++;
+        voteCounts.vp[vp.value]++;
+        voteCounts.secretary[secretary.value]++;
+        
+        // Save vote counts
+        localStorage.setItem('voteCounts', JSON.stringify(voteCounts));
+        
+        // Mark student as voted
+        votedStudents.push(studentId);
+        localStorage.setItem('votedStudents', JSON.stringify(votedStudents));
+        
+        // Save voter record
+        let voters = JSON.parse(localStorage.getItem('voters')) || [];
+        voters.push({
+            id: studentId,
+            name: fullName,
+            email: email,
+            grade: grade,
+            voteDate: new Date().toLocaleString(),
+            president: president.value,
+            vp: vp.value,
+            secretary: secretary.value
+        });
+        localStorage.setItem('voters', JSON.stringify(voters));
+        
+        // Show success message
+        document.getElementById('votingForm').style.display = 'none';
+        document.getElementById('voteSuccess').style.display = 'block';
+        
+        // Update results table if it exists
+        updateResultsTable();
+    }
+    
+    function closeSuccess() {
+        document.getElementById('voteSuccess').style.display = 'none';
+        document.getElementById('votingForm').reset();
+        document.getElementById('votingForm').style.display = 'block';
+    }
+    
+    function closeError() {
+        document.getElementById('alreadyVoted').style.display = 'none';
+        document.getElementById('votingForm').reset();
+        document.getElementById('votingForm').style.display = 'block';
+    }
+    
+    function updateResultsTable() {
+        // This function updates your existing results table
+        // Update president results
+        const presidentKeneni = document.querySelector('#presidentKeneni .vote-count');
+        const presidentSolomon = document.querySelector('#presidentSolomon .vote-count');
+        if(presidentKeneni) presidentKeneni.innerText = voteCounts.president["Keneni Wako"];
+        if(presidentSolomon) presidentSolomon.innerText = voteCounts.president["Solomon Alemayew"];
+        
+        // Update VP results
+        const vpEkram = document.querySelector('#vpEkram .vote-count');
+        const vpNatnael = document.querySelector('#vpNatnael .vote-count');
+        if(vpEkram) vpEkram.innerText = voteCounts.vp["Ekram Mohammed"];
+        if(vpNatnael) vpNatnael.innerText = voteCounts.vp["Natnael Habtamu"];
+        
+        // Update Secretary results
+        const secMeryem = document.querySelector('#secMeryem .vote-count');
+        const secMelat = document.querySelector('#secMelat .vote-count');
+        const secMohammed = document.querySelector('#secMohammed .vote-count');
+        const secBiruk = document.querySelector('#secBiruk .vote-count');
+        if(secMeryem) secMeryem.innerText = voteCounts.secretary["Meryem Desalegn"];
+        if(secMelat) secMelat.innerText = voteCounts.secretary["Melat Daniel"];
+        if(secMohammed) secMohammed.innerText = voteCounts.secretary["Mohammed Hamza"];
+        if(secBiruk) secBiruk.innerText = voteCounts.secretary["Biruk Daniel"];
+        
+        // Update total votes
+        const totalVotesSpan = document.getElementById('totalVotesCast');
+        if(totalVotesSpan) totalVotesSpan.innerText = votedStudents.length;
+        
+        // Update turnout
+        const turnoutSpan = document.getElementById('turnout');
+        if(turnoutSpan) {
+            const totalStudents = 296; // Adjust based on your school
+            const turnoutPercent = Math.round((votedStudents.length / totalStudents) * 100);
+            turnoutSpan.innerText = turnoutPercent;
+        }
+        
+        // Update progress bars if they exist
+        updateProgressBars();
+    }
+    
+    function updateProgressBars() {
+        // Update President progress bars
+        const presTotal = voteCounts.president["Keneni Wako"] + voteCounts.president["Solomon Alemayew"];
+        if(presTotal > 0) {
+            const keneniPercent = (voteCounts.president["Keneni Wako"] / presTotal) * 100;
+            const solomonPercent = (voteCounts.president["Solomon Alemayew"] / presTotal) * 100;
+            
+            const keneniBar = document.querySelector('#presidentKeneni .progress-bar');
+            const solomonBar = document.querySelector('#presidentSolomon .progress-bar');
+            if(keneniBar) keneniBar.style.width = keneniPercent + '%';
+            if(solomonBar) solomonBar.style.width = solomonPercent + '%';
+        }
+        
+        // Update VP progress bars
+        const vpTotal = voteCounts.vp["Ekram Mohammed"] + voteCounts.vp["Natnael Habtamu"];
+        if(vpTotal > 0) {
+            const ekramPercent = (voteCounts.vp["Ekram Mohammed"] / vpTotal) * 100;
+            const natnaelPercent = (voteCounts.vp["Natnael Habtamu"] / vpTotal) * 100;
+            
+            const ekramBar = document.querySelector('#vpEkram .progress-bar');
+            const natnaelBar = document.querySelector('#vpNatnael .progress-bar');
+            if(ekramBar) ekramBar.style.width = ekramPercent + '%';
+            if(natnaelBar) natnaelBar.style.width = natnaelPercent + '%';
+        }
+        
+        // Update Secretary progress bars
+        const secTotal = voteCounts.secretary["Meryem Desalegn"] + voteCounts.secretary["Melat Daniel"] + 
+                        voteCounts.secretary["Mohammed Hamza"] + voteCounts.secretary["Biruk Daniel"];
+        if(secTotal > 0) {
+            const meryemPercent = (voteCounts.secretary["Meryem Desalegn"] / secTotal) * 100;
+            const melatPercent = (voteCounts.secretary["Melat Daniel"] / secTotal) * 100;
+            const mohammedPercent = (voteCounts.secretary["Mohammed Hamza"] / secTotal) * 100;
+            const birukPercent = (voteCounts.secretary["Biruk Daniel"] / secTotal) * 100;
+            
+            const meryemBar = document.querySelector('#secMeryem .progress-bar');
+            const melatBar = document.querySelector('#secMelat .progress-bar');
+            const mohammedBar = document.querySelector('#secMohammed .progress-bar');
+            const birukBar = document.querySelector('#secBiruk .progress-bar');
+            if(meryemBar) meryemBar.style.width = meryemPercent + '%';
+            if(melatBar) melatBar.style.width = melatPercent + '%';
+            if(mohammedBar) mohammedBar.style.width = mohammedPercent + '%';
+            if(birukBar) birukBar.style.width = birukPercent + '%';
+        }
+    }
+    
+    // Initialize from stored data on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        updateResultsTable();
+    });
+</script>
     </script>
 </body>
 </html>
